@@ -11,7 +11,10 @@ class Benefactor(models.Model):
     free_time_per_week = models.PositiveSmallIntegerField(default=0)
 
 class Charity(models.Model):
-    pass
+    user = models.OneToOneField(User)
+    name = models.CharField(max_length=50)
+    reg_number = models.CharField(max_length=10)
+    
 
 
 class Task(models.Model):
